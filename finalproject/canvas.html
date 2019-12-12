@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script type="text/javascript">
+
+      function init(){
+
+        var canvas=document.getElementById('canvas1');
+        var ctx = canvas.getContext('2d');
+
+
+                          ctx.beginPath();
+                          ctx.moveTo(150, 200);
+                          ctx.bezierCurveTo(150, 197, 145, 185, 125, 185);
+                          ctx.bezierCurveTo(95, 185, 95, 222.5, 95, 222.5);
+                          ctx.bezierCurveTo(95, 240, 115, 262, 150, 280);
+                          ctx.lineTo(150,200);
+                          ctx.closePath();
+                          ctx.strokeStyle="red";
+                          ctx.stroke();
+                          ctx.fillStyle='blue';
+                          ctx.globalAlpha="0.5";
+                          ctx.fill();
+                          //왼쪽 하트
+
+
+                          ctx.beginPath();
+                          ctx.moveTo(150,280);
+                          ctx.bezierCurveTo(185, 262, 205, 240, 205, 222.5);
+                          ctx.bezierCurveTo(205, 222.5, 205, 185, 175, 185);
+                          ctx.bezierCurveTo(160, 185, 150, 197, 150, 200);
+                          ctx.lineTo(150,280);
+                          ctx.closePath();
+                          ctx.strokeStyle="red";
+                          ctx.stroke();
+                          ctx.fillStyle='red';
+                          ctx.globalAlpha="0.4";
+                          ctx.fill();
+
+                          //오른쪽 하트
+
+      }
+
+    </script>
+  </head>
+  <body onload="init();">
+
+    <div class="canvas1" >
+        <canvas id="canvas1" width="300" height="600" style="border:1px solid red; float:left;"></canvas>
+
+      </div>
+      <div class="canvasDetail" style="width:300px; height:600px; float:right;">
+      <p>The heart has four chamber: two atria and two venticles. The right side of the heart handles only oxygen-poor blood; the left side receives and pumps only oxygen-rich blood. A powerful four-chambered heart is an evolutionary adaptation that supports the high metabolic rates of mammals, which are endothermic. </p>
+
+      </div>
+  </body>
+</html>

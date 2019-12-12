@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Biology (HOME)</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+    var fileNm=['imgfile/wallpaper1.jpg','imgfile/wallpaper2.jpg','imgfile/wallpaper3.jpg','imgfile/wallpaper4.jpg','imgfile/wallpaper5.jpg','imgfile/wallpaper6.jpg','imgfile/wallpaper7.jpg'];
+
+    function imgChange(){
+      var url="url("+fileNm[Math.floor(Math.random()*7)]+")";
+      document.getElementById("bgGround").style.backgroundImage=url;
+    }
+
+    </script>
+
+  </head>
+  <body id='bgGround'>
+    <input id='btn' type="button" name="" value="change image" onclick="imgChange()"/>
+    <div class="wrapper">
+      <div class="header">
+      <img class="profile" src="imgfile/indexprofile.jpg">
+      <h1>Biology</h1>
+      <p>
+        Biology is complex because our bodies affect each other closely. Therefore, we need to understand each of the systems so we can comprehend how the body works. This website will help students to study biology, especially organ systems.
+      </p>
+
+    </div>
+
+    <div class="contents">
+      <div class="section">
+        <h2>Chapter 1 Circulatory System</h2>
+        <ul>
+          <li><a href="studyone.html" target="_blank">study</a></li>
+          <li><a href="learnone.html" target="_blank">learn</a></li>
+          <li><a href="testone.html" target="_blanck">test</a></li>
+        </ul>
+
+      </div>
+      <div class="section">
+        <h2>Chapter 2 Digestive System</h2>
+        <ul>
+          <li><a href="studytwo.html" target="_blank">study</a></li>
+          <li><a href="learntwo.html" target="_blank">learn</a></li>
+          <li><a href="testtwo.html" target="_blanck">test</a></li>
+        </ul>
+
+      </div>
+      <div class="section">
+        <h2>Chapter 3 Excretory System</h2>
+        <ul>
+          <li>study</li>
+          <li>learn</li>
+          <li>test</li>
+        </ul>
+
+      </div>
+      <div class="section">
+        <h2>Chapter 4 Respiratory System</h2>
+        <ul>
+          <li>study</li>
+          <li>learn</li>
+          <li>test</li>
+        </ul>
+
+      </div>
+      <div class="section">
+        <h2>Chapter 5 Nervous System</h2>
+        <ul>
+          <li>study</li>
+          <li>learn</li>
+          <li>test</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+    <div class="footer">
+      Minji's Final Project
+    </div>
+
+
+  </body>
+</html>
