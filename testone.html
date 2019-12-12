@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test Circulatory</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+
+    function buttonFunction(){
+      var i=0;
+
+    if(document.getElementById('test1').value !=document.getElementById('answer1').value){
+      i++;
+    }
+    if(document.getElementById('test2').value !=document.getElementById('answer2').value){
+      i++;
+    }
+    if(document.getElementById('test3').value !=document.getElementById('answer3').value){
+      i++;
+    }
+
+    if(i==1){
+      alert(i+" question wrong!");
+    }
+    else if(i>1){
+      alert(i+" questions wrong!")
+    }
+    else{
+      alert("correct :) ");
+    }
+  }
+
+    </script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <object type="application/x-shockwave-flash" data="imgfile/heartprofile.swf" width="100px" height="100px">
+          <param name="movie" value="imgfile/heartprofile.swf"/>
+          <param name="wmode" value="transparent"/>
+          <param name="allowScriptAcess" value="always"/>
+
+        </object>
+        <h1>Circulatory System</h1>
+        <p>Chapter Objectives <br> 1. Understand Cardia cycle <br> 2. Understand SA node and AV node </p>
+      </div>
+      <div class="contents">
+        <div class="learn">
+          <h2>The heart contracts and relaxes rythmically</h2>
+        <ul class='type1'>
+          <li>During <input type="text" id='test1'/> of the cardia cycle, blood flows form the veins into the heart chambers.</li>
+          <li>During <input type="text" id='test2'/>, contractions of the atria push blood into the ventricles, and then stronger contractions of the ventricles propel blood into the large arteries.</li>
+          <li>Heart valves <input type="text" id='test3'/> the backflow of blood.</li>
+          <li>The volume of blood that each ventricle pumps per minute is the cardiac output.</li>
+          <li>Heart rate is the number of heartbeats per minute.</li>
+        </ul>
+      </div>
+
+      <div class="learn">
+        <h2>Cardia cycle</h2>
+        <ol class='type3'>
+          <li>The heart is relaxed.(0.4 sec)</li>
+          <ul class='type4'>
+            <li>The semilunar valves are closed.</li>
+            <li>The AV valves are open.</li>
+          </ul>
+          <li>The atria contract.(0.1 sec)</li>
+          <li>The ventricles contract.(0.3 sec)</li>
+          <ul class='type4'>
+            <li>The semilunar valves are open.</li>
+            <li>The AV valves are closed.</li>
+          </ul>
+        </ol>
+      </div>
+
+      <div class="learn">
+        <h2>The SA node sets the tempo of the heartbeat</h2>
+        <ul class='type1'>
+          <li>The SA(sinoatrial) node</li>
+          <ul class='type2'>
+            <li>generates electrical impulses in atira</li>
+            <li>sets the rate of heart contractions</li>
+          </ul>
+          <li>The AV(atrioventricular) node</li>
+          <ul class='type2'>
+            <li>relays these signals to the ventricles</li>
+            <li>triggers ventricular contractions</li>
+          </ul>
+        </ul>
+      </div>
+      <input id='btn' type="button" id='button' value="score" onclick="buttonFunction()"/>
+      <input type="hidden" id='answer1' value="diastole"/>
+      <input type="hidden" id='answer2' value="systole"/>
+      <input type="hidden" id='answer3' value="present"/>
+
+      </div>
+
+    </div>
+    <div class="goto">
+      <input id='btn' type="button" name="" value="< Learn" onclick="self.location='learnone.html';">
+      <input id='btn2' type="button" name="" value="Index > " onclick="self.location='index.html';">
+
+    </div>
+    <div class="footer">
+      Minji's Final Project
+    </div>
+
+  </body>
+</html>

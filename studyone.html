@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Study Circulatory</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+      function layer_open(){
+        document.getElementById("open").style.display='';
+      }
+      function layer_close(){
+        document.getElementById("open").style.display='none';
+      }
+      function layer_open2(){
+        document.getElementById("open2").style.display='';
+      }
+      function layer_close2(){
+        document.getElementById("open2").style.display='none';
+      }
+    </script>
+    <script type="text/javascript">
+      function draw(){
+        var canvas=document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+          ctx.beginPath();
+          ctx.moveTo(150, 200);
+          ctx.bezierCurveTo(150, 197, 145, 185, 125, 185);
+          ctx.bezierCurveTo(95, 185, 95, 222.5, 95, 222.5);
+          ctx.bezierCurveTo(95, 240, 115, 262, 150, 280);
+          ctx.lineTo(150,200);
+          ctx.closePath();
+          ctx.strokeStyle="red";
+          ctx.stroke();
+          ctx.fillStyle='blue';
+          ctx.globalAlpha="0.5";
+          ctx.fill();
+          //왼쪽 하트
+
+
+          ctx.beginPath();
+          ctx.moveTo(150,280);
+          ctx.bezierCurveTo(185, 262, 205, 240, 205, 222.5);
+          ctx.bezierCurveTo(205, 222.5, 205, 185, 175, 185);
+          ctx.bezierCurveTo(160, 185, 150, 197, 150, 200);
+          ctx.lineTo(150,280);
+          ctx.closePath();
+          ctx.strokeStyle="red";
+          ctx.stroke();
+          ctx.fillStyle='red';
+          ctx.globalAlpha="0.4";
+          ctx.fill();
+
+          //오른쪽 하트
+      }
+
+    </script>
+  </head>
+
+  <body  onload="draw();">
+    <div class="wrapper">
+      <div class="header">
+        <object type="application/x-shockwave-flash" data="imgfile/heartprofile.swf" width="100px" height="100px">
+          <param name="movie" value="imgfile/heartprofile.swf"/>
+          <param name="wmode" value="transparent"/>
+          <param name="allowScriptAcess" value="always"/>
+
+        </object>
+        <h1>Circulatory System</h1>
+        <p>To sustain life, an animal must acquire nutrients, exchange gases, and dispose of waste products, and these needs ultimately extend to every cell in the body. These functions are facilitated by a circulatory system.
+        </p>
+
+      </div>
+      <div class="contents">
+        <div class="study">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CWFyxn0qDEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <img class="study" src="imgfile/heart.png"
+          alt="heart image" title="Blood flow through the human heart">
+          <br>
+          Details
+          <input id='btn' type="button" name="" onclick='layer_open()'value="open">
+          <input id='btn' type="button" name="" onclick='layer_close()'value="close">
+          <div id='open' style="display:none;" class="explain">
+            <p>This image shows the path blood takes as the heart <span>separately but simultaneously</span> pumps oxygen-poor blood to the lungs and oxygen-rich blood to the body. Notice that the ventricles, which pump blood to the lungs and body, have much thicker walls than the atria. The thin walled atria collect blood returning to the heart and squeeze it into the ventricles below, an action that does not require much force. Flap-like valves made of connective tissue are positioned in the exit from each chamber. The valves between the atria and ventricles are called <b>atrioventricular(AV) valves;</b> at the exit from each ventricle is a <b>semilunar valve.</b> These valves open when pushed from one side and close when pushed from the other, thus preventing backflow.</p>
+          </div>
+          <br>
+          <img class='study' src="imgfile/heart2.png" alt="heart image" title='cardiac cycle'>
+          <br>
+          Details
+          <input id='btn' type="button" name="" onclick='layer_open2()'value="open">
+          <input id='btn' type="button" name="" onclick='layer_close2()'value="close">
+          <div id='open2' style="display:none;" class="explain">
+            <p>The heart contracts and relaxes in a rhythmic sequence known as the cardiac cycle. When the heart contracts, it pumps blood; when it relaxes, blood fills its chambers. The image shows this cycle. In the phase called <b>diastole,</b> the heart is relaxed and blood flows into all four of its chambers. Blood enters the right atrium from the venae cavae and the left atrium from the pulmonary veins. <span>The AV valves are open and the semilunar valves are closed.</span> The ventricles nearly fill with blood during diastole. The contraction phase of the cardiac cycle is called <b>systole.</b> Systole begins with a very brief contractions of the atria that completely fills the ventricles with blood(atrial systole). Then the ventricles contract (ventricular systole). The force of their contraction closes the AV valves, <span>opens the semilunar valves, and pumps blood into the large arteries.</span> Blood flows into the relaxed during the second part of systole, as the green arrows in step 3 indicate.</p>
+          </div>
+          <br>
+          <div class="canvas1" >
+              <canvas id="canvas" width="300" height="600" style="float:left;"></canvas>
+            </div>
+            <div class="canvasDetail">
+            <p>The heart has four chamber: two atria and two venticles. The right side of the heart handles only oxygen-poor blood; the left side receives and pumps only oxygen-rich blood. A powerful four-chambered heart is an evolutionary adaptation that supports the high metabolic rates of mammals, which are endothermic. </p>
+
+            </div>
+              <div style="clear:both;"></div>
+
+
+
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+    <div class="goto">
+      <input id='btn' type="button" name="" value="< Index" onclick="self.location='index.html';">
+      <input id='btn2' type="button" name="" value="Learn > " onclick="self.location='learnone.html';">
+
+    </div>
+    <div class="footer">
+      Minji's Final Project
+    </div>
+
+  </body>
+</html>

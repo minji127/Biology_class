@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Study </title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+      function layer_open(){
+        document.getElementById("open").style.display='';
+      }
+      function layer_close(){
+        document.getElementById("open").style.display='none';
+      }
+
+    </script>
+  </head>
+
+  <body  onload="draw();">
+    <div class="wrapper">
+      <div class="header">
+        <p>put profile image</p>
+        <h1>Chapter name</h1>
+        <p>details
+        </p>
+
+      </div>
+      <div class="contents">
+        <div class="study">
+          <p>put youtube video</p>
+
+          <br>
+          Details
+          <input id='btn' type="button" name="" onclick='layer_open()'value="open">
+          <input id='btn' type="button" name="" onclick='layer_close()'value="close">
+          <div id='open' style="display:none;" class="explain">
+            <p>about image/video</p>
+          </div>
+          <br>
+          <div class="canvas1" style="border:1px solid red;float:left;" >
+            <p style=" width: 250px; height: 200px;border:1px solid red;float:left;"> canvas</p>
+            </div>
+
+            <div class="canvasDetail">
+            <p> about canvas </p>
+
+            </div>
+            <div style="clear:both;"></div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+    <div class="goto">
+      <input id='btn' type="button" name="" value="< Index" onclick="self.location='index.html';">
+      <input id='btn2' type="button" name="" value="Learn > " onclick="self.location='learntwo.html';">
+
+    </div>
+    <div class="footer">
+      Minji's Final Project
+    </div>
+
+  </body>
+</html>
